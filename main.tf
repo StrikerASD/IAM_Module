@@ -34,7 +34,3 @@ resource "google_project_iam_member" "service_account_role" {
   member  = "serviceAccount:${google_service_account.service_accounts[each.value.service_account].email}"
   role    = each.value.role
 }
-
-output "service_account_emails" {
-  value = { for sa in google_service_account.service_accounts : sa.key => sa.value.email }
-}
