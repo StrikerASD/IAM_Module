@@ -13,3 +13,13 @@ variable "service_accounts" {
   type = map(string)
   description = "Map of service accounts and display_names to be created. Key is service account and value is display_name"
 }
+
+variable "roles" {
+  type = map(string)
+  description = "Map of roles for a specific Service Account"
+}
+
+variable "members" {
+  type = map(string)
+  description = "Map of members - SA's to which specific roles will be applies"
+}
