@@ -17,5 +17,5 @@ resource "google_project_iam_member" "service_account_role_bindings" {
 }
 
 output "service_account_role_output" {
-  value = google_project_iam_member.service_account_role_bindings.role
+  value = google_project_iam_member.service_account_role_bindings[each.key]
 }
