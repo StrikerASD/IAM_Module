@@ -12,6 +12,6 @@ resource "google_service_account" "service_accounts" {
 resource "google_project_iam_member" "service_account_role_bindings" {
   for_each = var.roles
   project = var.project_id
-  role   = each.value
-  member = each.key
+  role   = each.key
+  member = each.value
 }
