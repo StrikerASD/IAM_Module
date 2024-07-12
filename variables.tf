@@ -10,9 +10,6 @@ variable "region" {
 }
 
 variable "service_accounts" {
-  description = "Map of service account IDs to their display names and roles."
-  type = map(object({
-    display_name = string
-    roles        = list(string)
-  }))
+  type = map(string)
+  description = "Map of service accounts and display_names to be created. Key is service account and value is display_name"
 }
