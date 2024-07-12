@@ -15,3 +15,7 @@ resource "google_project_iam_member" "service_account_role_bindings" {
   role   = each.key
   member = each.value
 }
+
+output "service_account_role_output" {
+  value = google_project_iam_member.service_account_role_bindings.role
+}
