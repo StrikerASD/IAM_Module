@@ -18,8 +18,3 @@ variable "roles" {
   type = map(string)
   description = "Map of roles for a specific Service Account"
 }
-
-variable "members" {
-  type = map(string)
-  description = "Map of members - SA's to which specific roles will be applies"
-}
